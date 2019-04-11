@@ -1,0 +1,33 @@
+﻿@model Web1.Models.IndexModel
+@{
+    ViewBag.Title = "DetailSalary";
+    Layout = "~/Views/Shared/_home.cshtml";
+}
+
+<h2 style="padding-left:50px">DetailSalary</h2>
+
+<div style="padding-left:50px">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.salary.SalaryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary.SalaryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salary.SalaryMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary.SalaryMoney)
+        </dd>
+
+    </dl>
+</div>
+<p style="padding-left:50px">
+    @Html.ActionLink("Edit", "EditSalary", new { id = Model.salary.SalaryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

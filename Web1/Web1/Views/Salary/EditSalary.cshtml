@@ -1,0 +1,45 @@
+﻿@model Web1.Models.IndexModel
+
+@{
+    ViewBag.Title = "EditSalary";
+    Layout = "~/Views/Shared/_home.cshtml";
+}
+
+<h2 style="padding-left:50px">EditSalary</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal" style="padding-left:50px">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @*@Html.HiddenFor(model => model.SalaryId)*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.salary.SalaryId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.salary.SalaryId, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.salary.SalaryId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.salary.SalaryMoney, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.salary.SalaryMoney, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.salary.SalaryMoney, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" style="background-color:aqua" />
+        </div>
+    </div>
+</div>
+}
+
+<div style="padding-left:50px">
+    @Html.ActionLink("Back to List", "Index")
+</div>

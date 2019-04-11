@@ -1,0 +1,104 @@
+﻿@model Web1.Models.Employee
+
+@{
+    ViewBag.Title = "Details Employee";
+    Layout = "~/Views/Shared/_home.cshtml";
+}
+
+<h2 style="padding-left:50px">DetailsEmployee</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="padding-left:50px">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentityCart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentityCart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcountBank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcountBank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryId)
+        </dd>
+
+    </dl>
+</div>
+<p style="padding-left:50px">
+    @Html.ActionLink("Edit", "EditEmployee", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<br />
+<br />
+<br />
+<br />
+<br />

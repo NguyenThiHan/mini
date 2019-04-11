@@ -1,0 +1,72 @@
+﻿@model Web1.Models.IndexDepartment
+
+@{
+    ViewBag.Title = "DeleteDepartment";
+    Layout = "~/Views/Shared/_home.cshtml";
+}
+
+<h2 style="padding-left:50px">DeleteDepartment</h2>
+
+<h3 style="padding-left:50px">Are you sure you want to delete this?</h3>
+
+<div style="padding-left:50px">
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.department.DepartmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.department.DepartmentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.department.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.department.DepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.department.DepartmentAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.department.DepartmentAddress)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" style="background-color:aqua" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

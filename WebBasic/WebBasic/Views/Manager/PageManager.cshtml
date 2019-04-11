@@ -1,0 +1,66 @@
+﻿@using WebBasic.Models;
+@model IEnumerable<Employee>
+
+@{
+    ViewBag.Title = "PageManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PageManager</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddEmployee")
+</p>
+<table class="table">
+    <tr>
+    
+        <th>
+            @Html.DisplayNameFor(model => model.IdPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateofBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateofBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditEmployee", new { id = item.IdEmployee }) |
+            @Html.ActionLink("Details", "DetailEmployee", new { id = item.IdEmployee }) |
+            @Html.ActionLink("Delete", "DeleteEmployee", new { id = item.IdEmployee })
+        </td>
+    </tr>
+}
+
+</table>

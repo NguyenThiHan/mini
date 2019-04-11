@@ -1,0 +1,70 @@
+﻿@model Web1.Models.IndexModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_home.cshtml";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h4 class="m-0 font-weight-bold text-primary">List Salary</h4>
+        <br />
+        <a href="@Url.Action("CreateSalary","Salary")" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Add Salary</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Salary Id</th>
+                        <th>Salary Money</th>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.salaries)
+                    {
+                        <tr>
+                            <td>
+                                @item.SalaryId
+                            </td>
+                            <td>
+                                @item.SalaryMoney
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditSalary", new { id = item.SalaryId }) |
+                                @Html.ActionLink("Details", "DetailSalary", new { id = item.SalaryId }) |
+                                @Html.ActionLink("Delete", "DeleteSalary", new { id = item.SalaryId })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
